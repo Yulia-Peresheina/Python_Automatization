@@ -6,8 +6,8 @@
 import fractions
 import math
 
-fraction1 = input("Введите первую дробь вида a/b: ")
-fraction2 = input("Введите вторую дробь вида a/b: ")
+fraction1 = input("Enter the first fraction (format a/b): ")
+fraction2 = input("Enter the second fraction (format a/b): ")
 
 
 def actions_with_frac(frac_1, frac_2):
@@ -44,7 +44,7 @@ def check_fractional(frac_1, frac_2, data_to_check):
     return False
 
 if check_fractional(fraction1, fraction2, actions_with_frac(fraction1, fraction2)):
-    print("Сумма дробей: ", actions_with_frac(fraction1, fraction2)[0])
-    print("Произведение дробей: ", actions_with_frac(fraction1, fraction2)[1])
+    print("Sum of fractions: ", actions_with_frac(fraction1, fraction2)[0])
+    print("Multiplication of fractions: ", actions_with_frac(fraction1, fraction2)[1])
 else:
     print("You broke it all")

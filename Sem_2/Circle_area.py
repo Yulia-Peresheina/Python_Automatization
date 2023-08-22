@@ -3,18 +3,18 @@
 # ✔ Диаметр не превышает 1000 у.е.
 # ✔ Точность вычислений должна составлять
 # не менее 42 знаков после запятой.
-import decimal
+from decimal import Decimal, getcontext
 import math
 
+diametr = int(input("Введите диаметр: "))
+def circle_area_and_length(diam):
+    area = math.pi * (diam / 2) ** 2
+    length = math.pi * diam
+    print(f"Площадь круга: {area: .12f}, Длина окружности: {length: .12f}")
 
-def circle_area_and_length():
-    diametr = int(input("Введите диаметр: "))
-    decimal.getcontext().prec = 42
-    area = math.pi * (diametr / 2) ** 2
-    length = math.pi * diametr
-    area = decimal.Decimal(area)
-    length = decimal.Decimal(length)
-    print("Площадь круга: ", area)
-    print("Длина окружности: ", length)
 
-circle_area_and_length()
+circle_area_and_length(diametr)
+
+
+getcontext().prec = 3
+print(Decimal('4.34') / 4)

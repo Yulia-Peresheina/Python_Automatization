@@ -18,7 +18,7 @@ dict_of_things = {
     "first aid kit": 1000
 }
 
-capacity_of_bag = int(input("Enter the capacity of your bag: "))
+capacity_of_bag = int(input("Enter the capacity of your bag in kg: ")) * 1000
 you_take = []
 for key, value in dict_of_things.items():
     if capacity_of_bag - value >= 0:

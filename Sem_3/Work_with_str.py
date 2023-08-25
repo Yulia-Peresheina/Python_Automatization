@@ -14,3 +14,17 @@ for el in list_of_text:
         max = len(el)
 for i in range(len(list_of_text)):
     print(f"{i + 1} {list_of_text[i]:>{max}}")
+
+# Вариант 2
+
+words = input('Введите строку: ').split()
+max_len = len(max(words, key=len))
+sorted_words = sorted(words, key=lambda word: word.lower())
+for i, word in enumerate(sorted_words, 1):
+    print(f'{i} {word.rjust(max_len + 1)}')
+
+# Вариант 3
+texts = "vsdsdsdsdsds dfsfdf fdfdfd fdfdfd".split()
+shift = len(max(texts))
+for n, el in enumerate(sorted(texts), 1):
+    print(f"{n}, {el:>{shift}}")

@@ -11,6 +11,8 @@ def create_dict_from_3_lists(names: list, rates: list, prize_percents: list) -> 
     name_prize_dict = {}
     for name, rate, prize_percent in zip(names, rates, prize_percents):
         prize = float(rate) * float(prize_percent.replace("%", "")) * 0.01
+        # аналог: res = {el_1: el_2 * float(el_3.rstrip("%")) / 100
+        # for el_1, el_2, el_3 in zip(names, rates, prize_percent)}
         name_prize_dict[name] = prize
     return name_prize_dict
 

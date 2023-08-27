@@ -7,7 +7,7 @@
 
 
 def line_by_line_output(data: str):
-    list_of_words = sorted(data.split())
+    list_of_words = sorted(data.lower().split())
     max_len = len(max(list_of_words, key=len))
     for i, el in enumerate(list_of_words, 1):
         print(f"{i} {el.rjust(max_len + 1)}")

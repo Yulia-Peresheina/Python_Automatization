@@ -15,5 +15,10 @@ def create_unicode_dict(data: str) -> dict:
         start += 1
     return unicode_dict
 
+def create_unicode_dict2(my_data):
+    dct = {chr(int(el)): el for el in sorted(my_data.split())}
+    return dct
 
 print(create_unicode_dict("1054 1201"))
+
+print(create_unicode_dict2("1054 1201"))

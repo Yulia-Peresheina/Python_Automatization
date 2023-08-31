@@ -4,7 +4,7 @@
 # Весь период (1 января 1 года - 31 декабря 9999 года) действует Григорианский календарь.
 # Проверку года на високосность вынести в отдельную защищённую функцию.
 
-from Modules.HW_6.Check_year_date import check_date
+from Sem_6_Modules.HW_6.Check_year_date import check_date
 
 
 print(check_date("29.05.1988"))

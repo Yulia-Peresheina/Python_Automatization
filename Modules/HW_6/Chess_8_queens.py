@@ -14,15 +14,15 @@ _position_8_queens = [[0, 0], [1, 4], [2, 7], [3, 5], [4, 2], [5, 6], [6, 1], [7
 # не правильная расстановка ферзей
 _bad_position_8_queens = [[0, 0], [1, 1], [2, 2], [3, 3], [4, 4], [5, 5], [6, 6], [7, 7]]
 
-
 def check_positions(pos):
     for i in range(0, 7):
         for j in range(i + 1, 7):
-            if (pos[i][0] - pos[j][0] == pos[i][1] - pos[j][1] and
-                    pos[i][0] == pos[j][0] and pos[i][1] == pos[j][1]):
+            if (pos[i][0] - pos[j][0] == pos[i][1] - pos[j][1] or
+                    pos[i][0] == pos[j][0] or pos[i][1] == pos[j][1]):
                 return False
     return True
 
+print(check_positions(_bad_position_8_queens))
 
 # Напишите функцию в шахматный модуль. Используйте генератор случайных чисел для случайной
 # расстановки ферзей в задаче выше.
@@ -38,4 +38,6 @@ def find_position():
             list_right_pos.append(pos)
             quantity_position -= 1
     return list_right_pos
+
+
 
